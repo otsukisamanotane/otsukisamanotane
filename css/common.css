@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@700&display=swap");
+
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 24px;
+  line-height: 24px;
+  font-family: "Yu Gothic Medium", YuGothic, sans-serif;
+  text-rendering: geometricPrecision;
+  background-color: #fff;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/*［リンク文字の書式］文字色：親と同じ、下線なし → body書式の下へ移動、WebDesignにリンクを設定 */
+a {
+  /* inheritは親と同じ */
+  color: inherit;
+  text-decoration: none;
+}
+
+/*［class="container"の書式］背景色:白、幅:980px、中央配置、内側左右余白:20px */
+.container {
+  background: #fff;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+header {
+  background-color: #6d8a67;
+  color: #fff;
+  padding: 5px 0;
+}
+
+header div.headernakami {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+header div.tsukititle {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  padding-bottom: 5px;
+}
+
+header p.tsukilogo {
+  flex-basis: 50px;
+}
+
+header div.otukisamanotane {
+  flex-basis: 210px;
+  text-align: left;
+}
+
+header p.hanayakissa {
+  font-size: 14px;
+  line-height: 14px;
+  padding-left: 5px;
+}
+
+header h1 {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-style: normal;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: bold;
+  /* margin-bottom: 7px; */
+}
+
+header div.denwa {
+  flex-basis: 210px;
+  text-align: left;
+}
+
+header p.toiawase {
+  font-size: 14px;
+  line-height: 14px;
+}
+
+header a.denwabango {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: bold;
+  /* padding-bottom: 5px; */
+}
+
+/*-------------------------------
+ハンバーガーアイコン（モバイル用）
+-------------------------------*/
+/* 幅:50px, 高さ:50px, ボーダー:なし, 背景色:任意, FlexBox, 横:中央, 縦:中央, 配置:absolute, 上:15px, 右:15px  */
+.hmenu {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: #6d8a67;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 5px;
+  right: 15px;
+}
+
+/* 幅:35px, 高さ:4px, 背景色:#fff, 角丸:4px, ブロック表示, 配置:absolute, 切り替え:0.5s */
+.hmenu span,
+.hmenu span::before,
+.hmenu span::after {
+  width: 35px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 4px;
+  display: block;
+  position: absolute;
+  transition: 0.5s;
+}
+
+/* 内容:"", 下:12px */
+.hmenu span::before {
+  content: "";
+  bottom: 12px;
+}
+
+/* 内容:"", 上:12px */
+.hmenu span::after {
+  content: "";
+  top: 12px;
+}
+
+/* 背景色:unset */
+.hmenu.close span {
+  background-color: unset;
+}
+
+/* 下:0, 回転:-45° */
+.hmenu.close span::before {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+/* 上:0, 回転:45° */
+.hmenu.close span::after {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+header ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 13px;
+  font-size: 15px;
+  font-weight: bold;
+  padding-bottom: 6px;
+}
+
+p.haitatsulogo {
+  padding-right: 5px;
+}
+
+footer {
+  background: #fff;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+footer iframe {
+  padding: 10px 0;
+  text-align: center;
+  /* background-color: aqua; */
+  width: 100%;
+}
+
+footer p a {
+  padding: 30px;
+  text-align: center;
+}
+
+footer h2 {
+  text-align: left;
+  font-weight: bold;
+}
+
+footer a {
+  display: block;
+  text-align: left;
+  font-weight: bold;
+}
+
+footer address {
+  text-align: left;
+}
+
+footer p.eigyouzikan {
+  text-align: left;
+  padding-bottom: 30px;
+}
+
+footer p.pagetop {
+  position: fixed;
+  right: 5px;
+  bottom: 10px;
+  display: none;
+}
+
+footer p.pagetop a:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 575px) {
+  header p.tsukilogo {
+    padding-top: 2px;
+  }
+  header div.tsukititle {
+    flex-basis: 350px;
+    margin-left: 20px;
+  }
+  header div.denwa {
+    /* flex-basis: 575px; */
+    margin-left: 92px;
+  }
+  header ul {
+    display: block;
+  }
+
+  .hmenu {
+    display: flex;
+  }
+
+  /* モバイルメニューA */
+  /* nav {
+    display: none;
+  } */
+
+  nav li {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  /* モバイルメニューB */
+  /* 幅:0, 高さ:100%-header高さpx, ボーダー:なし, ドロップシャドウ:-3px 0 6px rgba(0, 0, 0, 0.2), 配置:absolute, 上:header高さpx, 右:0, 切り替え:0.5s, オーバーフローX:隠す, 折り返さない */
+  nav {
+    width: 0px;
+    height: calc(100% - 90px);
+    border: none;
+    background-color: #fff;
+    color: #6d8a67;
+    box-shadow: -3px 0 6px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    transition: 0.5s;
+    overflow-x: hidden;
+    white-space: nowrap;
+    z-index: 1;
+  }
+
+  /* 幅:200px */
+  .hmenu.close + nav {
+    width: 200px;
+  }
+
+  /* 左余白:20px, 左揃え */
+  nav li {
+    padding-left: 20px;
+    text-align: left;
+  }
+
+  footer iframe {
+    height: 600px;
+  }
+
+  footer p.copyright span {
+    display: none;
+  }
+
+  footer p.pagetop {
+    position: unset;
+  }
+}

@@ -1,0 +1,92 @@
+@import url(common.css);
+
+#slider {
+  overflow: hidden;
+}
+.bx-wrapper {
+  border: none;
+  box-shadow: none;
+}
+.bx-viewport {
+  overflow: visible !important;
+  width: 1140px !important;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1000px) {
+  .bx-viewport {
+    width: 100% !important;
+  }
+}
+
+main h2 {
+  font-size: 33px;
+  line-height: 33px;
+  font-weight: 500px;
+  padding: 45px;
+}
+
+main ul {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 75px;
+}
+
+@media (max-width: 575px) {
+  main ul {
+    display: block;
+  }
+
+  main li {
+    padding-bottom: 25px;
+  }
+}
+
+main figure {
+  position: relative;
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+main figcaption {
+  color: #fff;
+  font-size: 24px;
+  line-height: 24px;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  position: absolute;
+  width: 255px;
+  top: 195px;
+}
+
+@media (max-width: 575px) {
+  main figcaption {
+    /* left: 45px; */
+  }
+}
+
+main h2.kissaten {
+  padding-top: 70px;
+}
+
+main div.kissashita {
+  padding: 25px;
+}
+
+main aside {
+  background: #6d8a67;
+  padding-bottom: 55px;
+}
+
+main aside h2 {
+  padding: 45px;
+}
+
+main aside div {
+  display: flex;
+  justify-content: center;
+}

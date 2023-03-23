@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../plugin"
+		},
+		{
+			"path": "../webdesign"
+		}
+	],
+	"settings": {}
+}
