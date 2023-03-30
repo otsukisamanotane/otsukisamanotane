@@ -12,10 +12,25 @@
   width: 1140px !important;
   margin: 0 auto;
 }
+
 @media screen and (max-width: 1000px) {
   .bx-viewport {
     width: 100% !important;
   }
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+  background: #b1b1ac;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active,
+.bx-wrapper .bx-pager.bx-default-pager a:focus {
+  background: #bd2727;
+}
+
+.bx-controls-direction a:hover {
+  transition: none;
 }
 
 main h2 {

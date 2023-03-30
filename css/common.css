@@ -52,7 +52,7 @@ header div.headernakami {
   flex-wrap: wrap;
 }
 
-header div.tsukititle {
+header a.tsukititle {
   display: flex;
   align-items: center;
   column-gap: 20px;
